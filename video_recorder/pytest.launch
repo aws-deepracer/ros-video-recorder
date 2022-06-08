@@ -1,0 +1,4 @@
+<launch>
+  <param name="test_module" value="."/>
+  <test test-name="video_recorder" pkg="video_recorder" type="pytest_runner.py" />
+</launch>

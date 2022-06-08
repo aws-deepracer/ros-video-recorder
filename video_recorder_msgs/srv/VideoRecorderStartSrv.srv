@@ -1,0 +1,31 @@
+#################################################################################
+#   Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.          #
+#                                                                               #
+#   Licensed under the Apache License, Version 2.0 (the "License").             #
+#   You may not use this file except in compliance with the License.            #
+#   You may obtain a copy of the License at                                     #
+#                                                                               #
+#       http://www.apache.org/licenses/LICENSE-2.0                              #
+#                                                                               #
+#   Unless required by applicable law or agreed to in writing, software         #
+#   distributed under the License is distributed on an "AS IS" BASIS,           #
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    #
+#   See the License for the specific language governing permissions and         #
+#   limitations under the License.                                              #
+#################################################################################
+# Custom message for Video Recorder Start Service
+string video_name               # (string) video recorder name
+string video_topic              # (string) video recorder subscriber topic
+string local_dir                # (string) video local directory.
+string video_format             # [Optional] (string) video format. Default is .mp4.
+uint64 max_num_frames           # [Optional] (uint64) video recorder maximum number of frame. Default is infinite number of frames.
+float64 fps                     # [Optional] (float64) video writer frame rate. Default is 15.0 frames per second.
+uint64 fourcc                   # [Optional] (uint64) video writer 4-character code of codec. Default is cv2.VideoWriter_fourcc(*'avc1')
+uint64 frame_width              # [Optional] (uint64) video writer width of the video frame. Default is 640 frame width.
+uint64 frame_height             # [Optional] (uint64) video writer height of the video frame. Default is 480 frame height.
+string s3_bucket                # [Optional] (string) s3 bucket to upload video file. Default value is empty string.
+string s3_prefix                # [Optional] (string) s3 prefix to upload video file. Default value is empty string.
+string s3_region                # [Optional] (string) s3 region to upload video file. Default value is empty string.
+---
+bool success                    # (bool) return true if start service request completed successfully and false otherwise
+string message                  # (string) extra message information regarding start service request
