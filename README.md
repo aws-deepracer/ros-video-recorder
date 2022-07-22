@@ -1,3 +1,5 @@
+## We have made a difficult decision of ceasing active development on this repo as of Jul 2022.
+
 ## ROS Video Recorder
 
 Generic ROS1 Video Recorder to save MP4 files and upload to s3 bucket
